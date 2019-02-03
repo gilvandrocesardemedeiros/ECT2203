@@ -1,7 +1,11 @@
-var horas, dias
+var precoFab, percLucro, percImp, lucro, imposto, precoFinal
 
-horas = parseInt(prompt("Entre com o número de horas: "))
-dias = Math.floor(horas / 24)
-horas = horas % 24
+precoFab = parseFloat(prompt("Entre com o preço de fábrica: "))
+percLucro = parseFloat(prompt("Entre com a porcentagem do lucro: ")) / 100
+percImp = parseFloat(prompt("Entre com a porcentagem de imposto: ")) / 100
 
-alert(dias + " dias e " + horas + " horas")
+lucro = precoFab * percLucro
+imposto = precoFab * percImp
+precoFinal = precoFab + lucro + imposto
+
+alert("Preço de fábrica: " + precoFab + "\nLucro: " + lucro + "\nImposto: " + imposto + "\nPreço total: " + precoFinal)
